@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cheruthuruthy Service Co-operative Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Malayalam:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Title -->
+    <div style="background: var(--primary-blue); color: var(--white); padding: 4rem 5%; text-align: center;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+            <span class="lang-en">Contact Us</span>
+            <span class="lang-ml">ബന്ധപ്പെടുക</span>
+        </h1>
+        <p>
+            <span class="lang-en">Get in touch with us for any queries</span>
+            <span class="lang-ml">ഏത് അന്വേഷണങ്ങൾക്കും ഞങ്ങളുമായി ബന്ധപ്പെടുക</span>
+        </p>
+    </div>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; max-width: 1200px; margin: 0 auto;">
+            <!-- Contact Info Sidebar -->
+            <div style="background: var(--primary-blue); color: var(--white); padding: 3rem 2rem; border-radius: 20px; box-shadow: var(--box-shadow);">
+                <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">
+                    <span class="lang-en">Contact Information</span>
+                    <span class="lang-ml">ബന്ധപ്പെടാനുള്ള വിവരങ്ങൾ</span>
+                </h3>
+                
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; margin-top: 5px; color: var(--light-blue);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">
+                            <span class="lang-en">Address</span>
+                            <span class="lang-ml">വിലാസം</span>
+                        </h4>
+                        <p style="color: var(--light-blue); line-height: 1.5;">
+                            Cheruthuruthy Service Co-operative Bank Ltd No. 121,<br>
+                            Cheruthuruthy P.O,<br>
+                            Thrissur District, Kerala - 679531
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                    <i class="fas fa-phone-alt" style="font-size: 1.5rem; margin-top: 5px; color: var(--light-blue);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">
+                            <span class="lang-en">Phone</span>
+                            <span class="lang-ml">ഫോൺ</span>
+                        </h4>
+                        <p style="color: var(--light-blue);">+91 4884 262233</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <i class="fas fa-envelope" style="font-size: 1.5rem; margin-top: 5px; color: var(--light-blue);"></i>
+                    <div>
+                        <h4 style="margin-bottom: 5px;">
+                            <span class="lang-en">Email</span>
+                            <span class="lang-ml">ഇമെയിൽ</span>
+                        </h4>
+                        <p style="color: var(--light-blue);">info@cheruthuruthyscb.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form" style="width: 100%;">
+                <h2 style="color: var(--primary-blue); margin-bottom: 2rem;">
+                    <span class="lang-en">Send us a Message</span>
+                    <span class="lang-ml">ഞങ്ങൾക്ക് ഒരു സന്ദേശം അയക്കുക</span>
+                </h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                            <span class="lang-en">Full Name</span>
+                            <span class="lang-ml">മുഴുവൻ പേര്</span>
+                        </label>
+                        <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your full name">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                                <span class="lang-en">Phone Number</span>
+                                <span class="lang-ml">ഫോൺ നമ്പർ</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                                <span class="lang-en">Email Address</span>
+                                <span class="lang-ml">ഇമെയിൽ വിലാസം</span>
+                            </label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                            <span class="lang-en">Message</span>
+                            <span class="lang-ml">സന്ദേശം</span>
+                        </label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="border: none; cursor: pointer; width: 100%;">
+                        <span class="lang-en">Send Message</span>
+                        <span class="lang-ml">സന്ദേശം അയക്കുക</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
