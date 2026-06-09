@@ -39,11 +39,12 @@ body {
 }
 
 body.ml-active .lang-en {
-    display: none;
+    display: none !important;
 }
 
 body.ml-active .lang-ml {
-    display: inline-block;
+    display: unset;
+    word-break: break-word;
 }
 
 /* Navbar */
@@ -725,7 +726,7 @@ footer {
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: row;
-        flex-wrap: nowrap; /* prevent wrapping so button stays inline */
+        flex-wrap: wrap; /* allow .main-nav to drop to the next row */
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
@@ -733,7 +734,9 @@ footer {
     }
 
     .logo-container {
-        max-width: 80%;
+        flex: 1;
+        min-width: 0; /* allows the container to shrink without breaking flex layout */
+        max-width: 85%;
     }
 
     .mobile-menu-toggle {
@@ -741,6 +744,7 @@ footer {
         position: relative;
         z-index: 9999;
         padding: 15px; /* increase touch target size */
+        flex-shrink: 0;
     }
 
     .main-nav {
