@@ -725,15 +725,22 @@ footer {
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* prevent wrapping so button stays inline */
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
         padding: 10px 5%;
     }
 
+    .logo-container {
+        max-width: 80%;
+    }
+
     .mobile-menu-toggle {
         display: block;
+        position: relative;
+        z-index: 9999;
+        padding: 15px; /* increase touch target size */
     }
 
     .main-nav {
@@ -801,11 +808,27 @@ footer {
 
     /* Fix services page inline styles for mobile */
     #deposits, #loans, #mss, #other-services {
-        padding: 1.5rem !important;
+        padding: 1.2rem !important;
     }
     
     #deposits h2, #loans h2, #mss h2, #other-services h2 {
-        font-size: 1.35rem !important;
+        font-size: 1.15rem !important;
+    }
+
+    #deposits > div:nth-child(2),
+    #loans > div:nth-child(2),
+    #mss > div:nth-child(2),
+    #other-services > div:nth-child(2) {
+        gap: 0.5rem !important;
+    }
+
+    #deposits > div:nth-child(2) > div:first-child,
+    #loans > div:nth-child(2) > div:first-child,
+    #mss > div:nth-child(2) > div:first-child,
+    #other-services > div:nth-child(2) > div:first-child {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.3rem !important;
     }
 
     .contact-grid {
