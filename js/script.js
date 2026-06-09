@@ -49,6 +49,7 @@ function initApp() {
         });
     }
 
+
     // Active link highlighting
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -57,4 +58,19 @@ function initApp() {
             link.classList.add('active');
         }
     });
+
+    // Auto-open accordion if URL has a hash link
+    if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            // Find the first details accordion inside this section and open it
+            const accordion = targetSection.querySelector('details.service-accordion');
+            if (accordion) {
+                // Add a small delay to ensure smooth scrolling finishes before opening
+                setTimeout(() => {
+                    accordion.setAttribute('open', '');
+                }, 500);
+            }
+        }
+    }
 }

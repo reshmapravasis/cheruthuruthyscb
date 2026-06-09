@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Cheruthuruthy Service Co-operative Bank</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Malayalam:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Malayalam:wght@400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header -->
     <div id="header-placeholder"></div>
 
     <!-- Page Title -->
-    <div style="background: var(--primary-blue); color: var(--white); padding: 4rem 5%; text-align: center;">
+    <div
+        style="background: linear-gradient(135deg, var(--primary-blue) 20%, var(--white) 120%); color: var(--white); padding: 4rem 5%; text-align: center; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
         <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">
             <span class="lang-en">Photo Gallery</span>
             <span class="lang-ml">ഫോട്ടോ ഗാലറി</span>
@@ -28,42 +33,208 @@
     <!-- Gallery Content -->
     <section class="section">
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0056b3, #00aaff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
-                    <i class="fas fa-building"></i>
+            <div class="gallery-item" onclick="openGalleryModal(1)" style="cursor: pointer;">
+                <img src="images/main-branch2.jpeg" alt="Main Branch">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Main Branch</span>
+                    <span class="lang-ml">പ്രധാന ശാഖ</span>
                 </div>
             </div>
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #00aaff, #0056b3); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
-                    <i class="fas fa-users"></i>
+            <div class="gallery-item" onclick="openGalleryModal(2)" style="cursor: pointer;">
+                <img src="images/painkulam.jpeg" alt="Painkulam Branch">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Painkulam Branch</span>
+                    <span class="lang-ml">പൈങ്കുളം ശാഖ</span>
                 </div>
             </div>
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0056b3, #e6f0fa); display: flex; align-items: center; justify-content: center; color: #0056b3; font-size: 2rem;">
-                    <i class="fas fa-handshake"></i>
+            <div class="gallery-item" onclick="openGalleryModal(3)" style="cursor: pointer;">
+                <img src="images/sayana-branch.jpeg" alt="Sayana Branch">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Evening Branch</span>
+                    <span class="lang-ml">സായാഹ്ന ശാഖ</span>
                 </div>
             </div>
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #e6f0fa, #00aaff); display: flex; align-items: center; justify-content: center; color: #0056b3; font-size: 2rem;">
-                    <i class="fas fa-award"></i>
+            <div class="gallery-item" onclick="openGalleryModal(4)" style="cursor: pointer;">
+                <img src="images/thaneerpanthal.jpeg" alt="Thaneerpanthal">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Thaneerpanthal</span>
+                    <span class="lang-ml">തണ്ണീർപ്പന്തൽ</span>
                 </div>
             </div>
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #00aaff, #e6f0fa); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
-                    <i class="fas fa-chart-line"></i>
+            <div class="gallery-item" onclick="openGalleryModal(5)" style="cursor: pointer;">
+                <img src="images/veg1.jpeg" alt="Farmers Market">
+                <div style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.9rem;">
+                    <i class="fas fa-images"></i> 4
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Farmers Market</span>
+                    <span class="lang-ml">കർഷക ചന്ത</span>
                 </div>
             </div>
-            <div class="gallery-item">
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0056b3, #004494); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
-                    <i class="fas fa-landmark"></i>
+            <div class="gallery-item" onclick="openGalleryModal(9)" style="cursor: pointer;">
+                <img src="images/firecracker.jpeg" alt="Fireworks Stall">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Fireworks Stall</span>
+                    <span class="lang-ml">പടക്ക കട</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGalleryModal(10)" style="cursor: pointer;">
+                <img src="images/thaneerpanthal2.jpeg" alt="Environmental">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 68, 148, 0.85); color: white; padding: 10px; text-align: center; font-weight: 600; z-index: 2;">
+                    <span class="lang-en">Environmental Day Celebration</span>
+                    <span class="lang-ml">പരിസ്ഥിതി ദിനാഘോഷം</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Universal Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <span class="close-modal" onclick="closeGalleryModal()">&times;</span>
+        <div style="position: absolute; top: 15px; left: 20px; z-index: 2001; display: flex; gap: 10px;">
+            <button onclick="zoomImage(0.2)" title="Zoom In" style="background: rgba(0,0,0,0.6); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 1.2rem; transition: background 0.3s;"><i class="fas fa-search-plus"></i></button>
+            <button onclick="zoomImage(-0.2)" title="Zoom Out" style="background: rgba(0,0,0,0.6); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 1.2rem; transition: background 0.3s;"><i class="fas fa-search-minus"></i></button>
+            <button onclick="resetZoom()" title="Reset Zoom" style="background: rgba(0,0,0,0.6); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 1.2rem; transition: background 0.3s;"><i class="fas fa-sync-alt"></i></button>
+        </div>
+        <div class="modal-content" style="position: relative; text-align: center; max-width: 1000px; padding: 40px 20px; margin-top: 2%;">
+            
+            <div class="slideshow-container" style="position: relative; margin: auto;">
+                <!-- Slide 1 -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/main-branch2.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 2 -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/painkulam.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 3 -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/sayana-branch.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 4 -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/thaneerpanthal.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 5 (Veg 1) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/veg1.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 6 (Veg 2) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/veg2.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 7 (Veg 3) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/veg3.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 8 (Veg 4) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/veg4.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 9 (Firecracker) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/firecracker.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+                <!-- Slide 10 (Environmental) -->
+                <div class="mySlides" style="display: none;">
+                    <img src="images/thaneerpanthal2.jpeg" style="width:100%; max-height: 80vh; object-fit: contain; border-radius: 10px; background: rgba(255,255,255,0.05);">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; left: 0px; width: auto; padding: 16px; margin-top: -22px; color: white; background: rgba(0,0,0,0.5); border-radius: 0 5px 5px 0; font-weight: bold; font-size: 30px; transition: 0.6s ease; user-select: none;">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; right: 0px; width: auto; padding: 16px; margin-top: -22px; color: white; background: rgba(0,0,0,0.5); border-radius: 5px 0 0 5px; font-weight: bold; font-size: 30px; transition: 0.6s ease; user-select: none;">&#10095;</a>
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <script>
+        let slideIndex = 1;
+        let zoomLevel = 1;
+
+        function openGalleryModal(index) {
+            const modal = document.getElementById('galleryModal');
+            if(modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                slideIndex = index;
+                showSlides(slideIndex);
+            }
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            if(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                resetZoom();
+            }
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function zoomImage(step) {
+            zoomLevel += step;
+            if(zoomLevel < 0.5) zoomLevel = 0.5;
+            if(zoomLevel > 3.5) zoomLevel = 3.5;
+            applyZoom();
+        }
+
+        function resetZoom() {
+            zoomLevel = 1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            let slides = document.getElementsByClassName("mySlides");
+            if (slides[slideIndex-1]) {
+                let activeImg = slides[slideIndex-1].querySelector('img');
+                if(activeImg) {
+                    activeImg.style.transform = `scale(${zoomLevel})`;
+                    activeImg.style.transition = 'transform 0.2s ease-in-out';
+                }
+            }
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            
+            // Reset zoom when switching slides
+            zoomLevel = 1;
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                let img = slides[i].querySelector('img');
+                if(img) img.style.transform = 'scale(1)'; // reset scale for all images
+            }
+            if(slides[slideIndex-1]) {
+                slides[slideIndex-1].style.display = "block";  
+            }
+        }
+
+        // Close modal when clicking outside of the images
+        window.onclick = function(event) {
+            var modal = document.getElementById('galleryModal');
+            if (event.target == modal) {
+                closeGalleryModal();
+            }
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
