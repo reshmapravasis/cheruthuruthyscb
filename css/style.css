@@ -17,12 +17,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Inter', 'Noto Sans Malayalam', sans-serif;
     color: var(--dark-text);
     background-color: var(--bg-light);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* Language Toggle Defaults */
@@ -305,6 +312,12 @@ nav ul li a.active::after {
 /* Common Sections */
 .section {
     padding: 5rem 5%;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
 }
 
 #about-section {
@@ -697,31 +710,135 @@ footer {
     transform: scale(1.03);
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 10px 5%;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+
+    .main-nav.active {
+        display: block;
     }
 
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 5px;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .bank-logo-img {
+        height: 50px;
+        width: 50px;
     }
 
     .bank-title {
         white-space: normal;
-        font-size: 16px;
-        text-align: center;
+        font-size: 12px;
+        text-align: left;
+        line-height: 1.2;
     }
 
     .logo-container {
+        flex-direction: row;
+        text-align: left;
+        gap: 10px;
+        flex: 1;
+    }
+    
+    .top-bar {
         flex-direction: column;
+        gap: 5px;
         text-align: center;
+    }
+
+    .carousel-slide {
+        width: 260px;
+        margin-right: 1rem;
+    }
+
+    /* Fix services page inline styles for mobile */
+    #deposits, #loans, #mss, #other-services {
+        padding: 1.5rem !important;
+    }
+    
+    #deposits h2, #loans h2, #mss h2, #other-services h2 {
+        font-size: 1.35rem !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fullscreen Gallery Modal for Mobile */
+    .modal-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mySlides img {
+        border-radius: 0 !important;
+    }
+
+    /* Center Footer on Mobile */
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-col div[style*="display: flex"] {
+        justify-content: center;
     }
 }
 

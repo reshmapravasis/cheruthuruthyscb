@@ -59,6 +59,15 @@ function initApp() {
         }
     });
 
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    }
+
     // Auto-open accordion if URL has a hash link
     if (window.location.hash) {
         const targetSection = document.querySelector(window.location.hash);
