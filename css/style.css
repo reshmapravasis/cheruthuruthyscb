@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    font-family: 'Inter', 'Noto Sans Malayalam', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--dark-text);
     background-color: var(--bg-light);
     line-height: 1.6;
@@ -45,6 +45,8 @@ body.ml-active .lang-en {
 body.ml-active .lang-ml {
     display: unset;
     word-break: break-word;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
 }
 
 /* Navbar */
@@ -200,7 +202,7 @@ header {
 .bank-subtitle.lang-ml {
     font-size: 12px;
     margin-top: 2px;
-    font-family: 'Gayathri', 'Manjari', 'Noto Sans Malayalam', sans-serif;
+    font-family: sans-serif;
 }
 
 nav ul {
@@ -731,6 +733,7 @@ footer {
         align-items: center;
         gap: 0.5rem;
         padding: 10px 5%;
+        position: relative; /* for absolute positioning of main-nav */
     }
 
     .logo-container {
@@ -749,10 +752,17 @@ footer {
 
     .main-nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        margin-top: 10px;
+        background: var(--white);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        margin-top: 0;
         border-top: 1px solid #eee;
         padding-top: 15px;
+        padding-bottom: 20px;
+        z-index: 999;
     }
 
     .main-nav.active {
