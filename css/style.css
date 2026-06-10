@@ -478,6 +478,56 @@ footer {
     }
 }
 
+/* History Section Expand Animation */
+.history-text-container {
+    position: relative;
+    /* max-height removed because Read More button was removed */
+}
+
+.history-text-container .lang-en {
+    font-family: 'Merienda', cursive !important;
+    font-size: 1.15rem !important;
+    line-height: 1.8;
+    color: var(--dark-text);
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* Removed expanded and after gradient styles as they are no longer needed */
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all var(--transition-speed);
+}
+
+.read-more-btn i {
+    transition: transform 0.5s ease;
+}
+
+.read-more-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+.read-more-btn:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
+}
+
 /* Forms */
 .contact-form {
     background: var(--white);
@@ -538,13 +588,16 @@ footer {
 
 /* Team Section */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     padding: 0 5%;
 }
 
 .team-member {
+    width: 260px;
+    max-width: 100%;
     background: var(--white);
     padding: 1.5rem;
     border-radius: 15px;

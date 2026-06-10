@@ -83,3 +83,25 @@ function initApp() {
         }
     }
 }
+
+// Function for History section Read More toggle
+window.toggleHistory = function() {
+    const container = document.getElementById('historyTextContainer');
+    const btn = document.getElementById('readMoreBtn');
+    if (container && btn) {
+        container.classList.toggle('expanded');
+        btn.classList.toggle('expanded');
+        
+        const isExpanded = container.classList.contains('expanded');
+        const langEn = btn.querySelector('.lang-en');
+        const langMl = btn.querySelector('.lang-ml');
+        
+        if (isExpanded) {
+            langEn.textContent = 'Read Less';
+            langMl.textContent = 'ചുരുക്കി വായിക്കുക';
+        } else {
+            langEn.textContent = 'Read More';
+            langMl.textContent = 'കൂടുതൽ വായിക്കുക';
+        }
+    }
+};
