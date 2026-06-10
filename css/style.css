@@ -654,8 +654,10 @@ footer {
     animation: scrollTrack 20s linear infinite;
 }
 
-.carousel-track:hover {
-    animation-play-state: paused;
+@media (hover: hover) {
+    .carousel-track:hover {
+        animation-play-state: paused;
+    }
 }
 
 .carousel-slide {
@@ -676,7 +678,8 @@ footer {
 .carousel-slide img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--white);
     transition: transform 0.3s;
 }
 
@@ -702,7 +705,7 @@ footer {
     }
 
     100% {
-        transform: translateX(calc(-50% - 1rem));
+        transform: translateX(-50%);
     }
 }
 
